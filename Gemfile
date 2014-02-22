@@ -8,6 +8,7 @@ gem 'rails', ' ~> 3.2.17'
 gem 'pg'
 
 gem 'simple_form'
+gem 'devise'
 
 
 group :development do

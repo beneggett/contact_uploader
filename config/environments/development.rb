@@ -18,8 +18,9 @@ ContactUploader::Application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.asset_host = "http://contact_uploader.dev"
-  
+  config.action_mailer.asset_host = "http://contact-uploader.dev"
+  config.action_mailer.default_url_options = { :host => 'contact-uploader.dev' }
+
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
