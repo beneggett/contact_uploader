@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    
+
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-navigation">
         <span class="sr-only">Toggle navigation</span>
@@ -20,11 +20,15 @@
 
       <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-            <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
+            <% if current_user.has_any_role? :admin, :super_admin %>
+              <li> <%= link_to "Admin", admin_path %> </li>
+            <% end %>
+              <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
+
           <% else %>
             <li> <%= link_to "Sign Up", new_user_registration_path %> </li>
             <li> <%= link_to "Sign In", new_user_session_path %> </li>
-            
+
           <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -9,6 +9,7 @@ gem 'pg'
 
 gem 'simple_form'
 gem 'devise'
+gem "rolify"
 
 
 group :development do
