@@ -10,7 +10,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'devise'
 gem "rolify"
-
+gem 'cancan'
 
 group :development do
   gem "pry-rails"

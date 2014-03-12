@@ -1,4 +1,7 @@
 ContactUploader::Application.routes.draw do
+  resources :posts
+
+
   get "/admin", to: "admin#index", as: :admin
 
   namespace :admin do
