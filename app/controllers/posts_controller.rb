@@ -8,6 +8,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
+      format.xml {render xml: @posts}
     end
   end
 
@@ -50,6 +51,7 @@ class PostsController < ApplicationController
       else
         format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+
       end
     end
   end

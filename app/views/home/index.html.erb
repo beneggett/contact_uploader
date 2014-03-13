@@ -3,3 +3,6 @@
 <% end %>
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+<h3>Weather near you</h3>
+<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=<%= @ip_info["latitude"] %>&lon=<%= @ip_info["longitude"] %>&name=<%= @ip_info["city"] %>" </iframe>
