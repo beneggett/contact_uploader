@@ -8,9 +8,13 @@ gem 'rails', ' ~> 3.2.17'
 gem 'pg'
 
 gem 'simple_form'
+
 gem 'devise'
+gem 'omniauth-facebook'
+
 gem "rolify"
 gem 'cancan'
+gem 'figaro'
 
 group :development do
   gem "pry-rails"

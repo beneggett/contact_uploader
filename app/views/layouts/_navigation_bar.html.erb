@@ -21,6 +21,7 @@
       <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
             <% if current_user.has_any_role? :admin, :super_admin %>
+
               <li> <%= link_to "Admin", admin_path %> </li>
             <% end %>
               <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
@@ -28,6 +29,7 @@
           <% else %>
             <li> <%= link_to "Sign Up", new_user_registration_path %> </li>
             <li> <%= link_to "Sign In", new_user_session_path %> </li>
+            <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
 
           <% end %>
     </div><!-- /.navbar-collapse -->
